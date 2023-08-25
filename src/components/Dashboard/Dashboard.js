@@ -1,6 +1,6 @@
 import './Dashboard.scss';
-import avatar from '../../assets/Images/avatar.jfif';
-import graph from '../../assets/Images/graph.svg';
+import avatar from '../../assets/images/avatar.jfif';
+import graph from '../../assets/images/graph.svg';
 import facebookIcon from '../../assets/Icons/facebook.svg';
 import instagramIcon from '../../assets/Icons/instagram.svg';
 import tiktokIcon from '../../assets/Icons/tiktok.svg';
