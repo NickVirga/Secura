@@ -7,6 +7,7 @@ import tiktokIcon from '../../assets/Icons/tiktok.svg';
 import pinterestIcon from '../../assets/Icons/pinterest.svg';
 import twitterIcon from '../../assets/Icons/twitter.svg';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
     const [activeTab, setActiveTab] = useState('activity');
@@ -68,7 +69,9 @@ function Dashboard() {
                     <span className='dashboard__activity-stats-titles--activity'>Activity</span>
                 </div>
                 <div className='dashboard__activity-stats-card-section'>
-                    <div className='dashboard__activity-stats-card dashboard__activity-stats-card--facebook'>
+                    <Link 
+                    className='dashboard__activity-stats-card dashboard__activity-stats-card--facebook'
+                    to='/socials'>
                         <div className='dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social--facebook'>
                             <img src={facebookIcon} alt='facebook icon'/>
                             <span>Facebook</span>
@@ -76,7 +79,7 @@ function Dashboard() {
                         <span className='dashboard__activity-stats-card-activity'>
                             47%
                         </span>
-                    </div>
+                    </Link>
                     <div className='dashboard__activity-stats-card'>
                         <div className='dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social--instagram'>
                             <img src={instagramIcon} alt='facebook icon'/>
