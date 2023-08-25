@@ -54,7 +54,7 @@
     border-radius: 5px;
     border: 0.1px solid #363a5f;
     position: absolute;
-    left: 63px;
+    left: 60px;
     background-color: #AFB4E7;
   }
 
@@ -136,6 +136,10 @@
     }
   }
 
+  &__steps-list{
+    list-style: none;
+  }
+
 }
 
 .popup {
@@ -151,12 +155,13 @@
   width:80%;
 
   ul {
-    list-style: decimal; 
+    list-style: decimal;
     padding-left: 1.5em;
   }
 
   li {
     margin-bottom: 0.5em;
+
   }
 
 
