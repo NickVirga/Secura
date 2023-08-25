@@ -1,13 +1,15 @@
-import React from "react";
+import WelcomeScreen from '../src/components/WelcomeScreen/WelcomeScreen';
+import Dashboard from '../src/components/Dashboard/Dashboard';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/header/Header"
 
 
 function App() {
     return (
         <BrowserRouter>
-        <Header />
-
+        <Routes>
+            <Route path='/' Component={WelcomeScreen}/>
+            <Route path='/dashboard' Component={Dashboard}/>
+        </Routes>
         </BrowserRouter>
         );
     }

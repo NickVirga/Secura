@@ -1,0 +1,18 @@
+@import '../../styles/main';
+
+body {
+    background-color: $primary-color-1;     
+}
+.welcome-screen {
+    height: $device-height;
+    width: $device-width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    &__logo {
+        width: 20.125rem;
+    }
+  }
+
+
