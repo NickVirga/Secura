@@ -147,6 +147,15 @@
   z-index: 2;
   width:80%;
 
+  ul {
+    list-style: decimal; 
+    padding-left: 1.5em;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
 
   p {
       margin-bottom: 15px;
