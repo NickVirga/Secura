@@ -82,7 +82,7 @@ function Dashboard() {
                     </Link>
                     <div className='dashboard__activity-stats-card'>
                         <div className='dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social--instagram'>
-                            <img src={instagramIcon} alt='facebook icon'/>
+                            <img src={instagramIcon} alt='instagram icon'/>
                             <span>Instagram</span>
                         </div>
                         <span className='dashboard__activity-stats-card-activity'>
@@ -91,7 +91,7 @@ function Dashboard() {
                     </div>
                     <div className='dashboard__activity-stats-card'>
                         <div className='dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social--tiktok'>
-                            <img src={tiktokIcon} alt='facebook icon'/>
+                            <img src={tiktokIcon} alt='tiktok icon'/>
                             <span>TikTok</span>
                         </div>
                         <span className='dashboard__activity-stats-card-activity'>
@@ -100,7 +100,7 @@ function Dashboard() {
                     </div>
                     <div className='dashboard__activity-stats-card'>
                         <div className='dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social--pinterest'>
-                            <img src={pinterestIcon} alt='facebook icon'/>
+                            <img src={pinterestIcon} alt='pinterest icon'/>
                             <span>Pinterest</span>
                         </div>
                         <span className='dashboard__activity-stats-card-activity'>
@@ -109,7 +109,7 @@ function Dashboard() {
                     </div>
                     <div className='dashboard__activity-stats-card'>
                         <div className='dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social dashboard__activity-stats-card-social--twitter'>
-                            <img src={twitterIcon} alt='facebook icon'/>
+                            <img src={twitterIcon} alt='twitter icon'/>
                             <span>Twitter</span>
                         </div>
                         <span className='dashboard__activity-stats-card-activity'>
