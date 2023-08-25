@@ -1,20 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.scss';
 
+import WelcomeScreen from '../src/components/WelcomeScreen/WelcomeScreen';
+import Dashboard from '../src/components/Dashboard/Dashboard';
 import SocialsPage from "./pages/SocialsPage/SocialsPage";
 
 function App() {
-  return (
-    <BrowserRouter>
-      {/* <Header /> */}
-      <Routes>
-        <Route path="/" element={<SocialsPage />} />
-        {/* <Route path="/" element={<T />} /> */}
-        {/* <Route path="/" element={<T />} /> */}
-      </Routes>
-      {/* <Footer /> */}
-    </BrowserRouter>
-  );
-}
-
-export default App;
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<WelcomeScreen />}/>
+                <Route path='/dashboard' element={<Dashboard />}/>
+                <Route path='/socials' element={<SocialsPage />}/>
+            </Routes>
+        </BrowserRouter>
+        );
+    }
+    
+    export default App;
