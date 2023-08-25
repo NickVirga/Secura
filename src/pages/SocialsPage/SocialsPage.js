@@ -5,16 +5,27 @@ import { useState, useEffect } from "react";
 import axios from 'axios'
 
 function SocialsPage() {
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPrivacyPopup, setShowPrivacyPopup] = useState(false);
+  const [showDeletePopup, setShowDeletePopup] = useState(false);
 
-  const openPopup = () => {
-      setShowPopup(true);
-      document.body.classList.add('blur');
+  const openPrivacyPopup = () => {
+    setShowPrivacyPopup(true);
+    document.body.classList.add('blur');
   };
 
-  const closePopup = () => {
-      setShowPopup(false);
-      document.body.classList.remove('blur');
+  const closePrivacyPopup = () => {
+    setShowPrivacyPopup(false);
+    document.body.classList.remove('blur');
+  };
+
+  const openDeletePopup = () => {
+    setShowDeletePopup(true);
+    document.body.classList.add('blur');
+  };
+
+  const closeDeletePopup = () => {
+    setShowDeletePopup(false);
+    document.body.classList.remove('blur');
   };
   const [privacyPolicy, setPrivacyPolicy] = useState("")
   const [dataCollection, setDataCollection] = useState("")
@@ -89,15 +100,15 @@ const privacyClickHandler = () => {
           </div>
         </header>
 
-        <h2 className="socials__privacy-title" onClick={openPopup}>Facebook's Privacy Policy</h2>
-        {showPopup && (
-                <div className='overlay' onClick={closePopup}>
+        <h2 className="socials__privacy-title" onClick={openPrivacyPopup}>Facebook's Privacy Policy</h2>
+        {showPrivacyPopup  && (
+                <div className='overlay' onClick={openPrivacyPopup}>
                     <div className='popup' onClick={(e) => e.stopPropagation()}>
                         <p>Facebook's privacy policy grants users control over their personal data. Users can choose how and with whom to share their information.
                         Facebook also has many safety and security features to protect user data, such as encryption and login notifications. 
                         The company also employs data-processing and storage safeguards to protect user data from accidentally or illegally accessed by third parties.
                         Additionally, Facebook offers tools to control advertising practices, manage who can view posts, and access data shared with applications.</p>
-                        <button className='close-popup-btn' onClick={closePopup}>OK</button>
+                        <button className='close-popup-btn' onClick={closePrivacyPopup}>OK</button>
                     </div>
                 </div>
                 )}
@@ -120,10 +131,28 @@ const privacyClickHandler = () => {
           commented, or interacted with content you have posted. */}
           {dataCollection}
         </div>
-        <h3 className="socials__deletion-header">Can this data be deleted?</h3>
+        <h3 className="socials__deletion-header" >Can this data be deleted?</h3>
         <div className="socials__deletion-explanation">
           Yes! you can delete the data that has been collected by Facebook by
-          following these <span className="socials__deletion-steps" onClick={stepsClickHandler}>quick and easy steps!</span>
+          following these <span className="socials__deletion-steps" onClick={openDeletePopup}>quick and easy steps!</span>
+          {showDeletePopup  && (
+          <div className='overlay' onClick={openDeletePopup}>
+            <div className='popup' onClick={(e) => e.stopPropagation()}>
+              <ul>
+                <li>Log in to your Facebook account</li>
+                <li>Go to the Settings page (located in the drop-down menu at the top right of the screen)</li>
+                <li>Click on Your Facebook Information in the left menu</li>
+                <li>Click on Delete Your Account and Information</li>
+                <li>Click the "Start My Archive" button at the bottom of the page</li>
+                <li>Enter your password and click Submit</li>
+                <li>Select which information you'd like to delete from your profile and click Delete Account</li>
+                <li>Click the box next to the Deletion Confirmation, then click Delete Account again</li>
+                <li>Your account and data will now be deleted.</li>
+              </ul>
+              <button className='close-popup-btn' onClick={closeDeletePopup}>OK</button>
+            </div>
+          </div>
+        )}
         </div>
       </div>
     </>
