@@ -1,7 +1,7 @@
 import "./SocialsPage.scss";
-import facebookLogo from "../../assets/images/devicon_facebook.svg";
-import alertsIcon from "../../assets/images/ion_notifications-outline.svg";
-import alertsIconOn from "../../assets/images/alert-on.svg";
+import facebookLogo from "../../assets/Images/devicon_facebook.svg";
+import alertsIcon from "../../assets/Images/ion_notifications-outline.svg";
+import alertsIconOn from "../../assets/Images/alert-on.svg";
 import { useState, useEffect } from "react";
 import axios from 'axios'
 
