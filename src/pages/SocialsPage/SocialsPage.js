@@ -1,8 +1,20 @@
 import "./SocialsPage.scss";
 import facebookLogo from "../../assets/images/devicon_facebook.svg";
 import alertsIcon from "../../assets/images/ion_notifications-outline.svg";
+import React, { useState } from 'react';
 
 function SocialsPage() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const openPopup = () => {
+      setShowPopup(true);
+      document.body.classList.add('blur');
+  };
+
+  const closePopup = () => {
+      setShowPopup(false);
+      document.body.classList.remove('blur');
+  };
   return (
     <>
       <div className="socials__container">
@@ -19,7 +31,18 @@ function SocialsPage() {
           </div>
         </header>
 
-        <h2 className="socials__privacy-title">Facebook's Privacy Policy</h2>
+        <h2 className="socials__privacy-title" onClick={openPopup}>Facebook's Privacy Policy</h2>
+        {showPopup && (
+                <div className='overlay' onClick={closePopup}>
+                    <div className='popup' onClick={(e) => e.stopPropagation()}>
+                        <p>Facebook's privacy policy grants users control over their personal data. Users can choose how and with whom to share their information.
+                        Facebook also has many safety and security features to protect user data, such as encryption and login notifications. 
+                        The company also employs data-processing and storage safeguards to protect user data from accidentally or illegally accessed by third parties.
+                        Additionally, Facebook offers tools to control advertising practices, manage who can view posts, and access data shared with applications.</p>
+                        <button className='close-popup-btn' onClick={closePopup}>OK</button>
+                    </div>
+                </div>
+                )}
         <div className="socials__alerts-container">
           <h2 className="socials__alerts-header">
             Get alerts on policy changes
