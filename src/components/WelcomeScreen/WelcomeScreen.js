@@ -6,7 +6,9 @@ function WelcomeScreen() {
 
     return (
         <section className="welcome-screen">
-            <Link className='welcome-screen__logo-container'>
+            <Link 
+            to='/dashboard'
+            className='welcome-screen__logo-container'>
                 <img className="welcome-screen__logo" src={logo} alt="secura logo"/>
             </Link>
         </section>

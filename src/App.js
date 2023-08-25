@@ -6,10 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
     return (
         <BrowserRouter>
-        <Routes>
-            <Route path='/' Component={WelcomeScreen}/>
-            <Route path='/dashboard' Component={Dashboard}/>
-        </Routes>
+            <Routes>
+                <Route path='/' element={<WelcomeScreen />}/>
+                <Route path='/dashboard' element={<Dashboard />}/>
+            </Routes>
         </BrowserRouter>
         );
     }
